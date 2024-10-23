@@ -1,0 +1,51 @@
+{
+  "name": "@sinohope/hardhat-sinohope",
+  "version": "1.0.0",
+  "description": "Hardhat plugin for integrating with Sinohope",
+  "repository": "github:sinohope/hardhat-sinohope",
+  "author": "Sinohope",
+  "license": "MIT",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "ethereum",
+    "smart-contracts",
+    "waas",
+    "hardhat",
+    "hardhat-plugin"
+  ],
+  "scripts": {
+    "lint:fix": "prettier --write 'src/**/*.{js,ts}' && tslint --fix --config tslint.json --project tsconfig.json",
+    "lint": "tslint --config tslint.json --project tsconfig.json",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist/",
+    "LICENSE",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@types/fs-extra": "5.1.0",
+    "@types/mocha": "5.2.7",
+    "@types/node": "18.6.4",
+    "hardhat": "^2.10.1",
+    "prettier": "2.0.5",
+    "ts-node": "8.10.2",
+    "tslint": "5.20.1",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-plugin-prettier": "2.3.0",
+    "typescript": "4.7.4"
+  },
+  "peerDependencies": {
+    "hardhat": "^2.6.0"
+  },
+  "dependencies": {
+    "@sinohope/sinohope-web3-provider": "^1.0.3",
+    "undici": "5.28.4"
+  }
+}
